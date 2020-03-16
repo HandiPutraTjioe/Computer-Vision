@@ -1,0 +1,178 @@
+# '''print di python'''
+# print("hello world")
+
+# '''scan di python'''
+# name = input("Nama: ")
+# age = int(input("Umur: "))
+# print(type(age))
+# print(name) 
+
+'''Arrays in Python : list, tuple, dictionary'''
+'''List'''
+# '''Cara Buat List'''
+# movies = ['Harry Potter','Ant Man','Aqua Man']
+
+# print(type(movies))
+# print(movies)
+
+# '''add data to list'''
+# movies.append('Venom')
+# movies += ['Alita','Knight']
+# print(movies)
+
+# '''update data in list'''
+# print(movies[3])
+# movies[3] = 'Alita'
+# print(movies[3])
+
+# '''delete data in list'''
+#movies.remove(len(movies) - 1)
+# movies.remove('Knight')
+# print(movies)
+
+''' tuple '''
+# ''' cara buat tuple '''
+# genre = ('Action', 'Adventure', 'Thriller')
+# print(type(genre))
+# print(genre)
+
+# ''' add data in tuple '''
+# genre += ('Horror', 'Drama')
+# print(genre)
+
+# print(genre[1])
+
+# ''' delete data in tuple '''
+# ''' delete index ke 2 '''
+# genre = genre[0:2] + genre[3:5]
+# ''' [start : stop] '''
+# ''' start dimulai dari 0'''
+# ''' stop ny itu 1'''
+# print(genre)
+
+# ''' Update data in tuple '''
+# ''' delete + insert karena tuple tdk bisa di update (isinya constant) '''
+# genre[2] = 'Comedy'
+# print(genre)
+
+''' Dictionary '''
+# ''' multiple data '''
+# ''' Cara buat dictionary '''
+# movie = {
+#     'name': ['Alita','Aquaman'],
+#     'genre': 'Sci-Fi',
+#     'rating': 4.23
+# }
+# print(movie['name'][1])
+
+# ''' add data in dictionary '''
+# movie['duration'] = 120
+# print(movie)
+
+# ''' update data in dictionary '''
+# ''' cara simple update data '''
+# # movie['rating'] = 4.45
+# # movie['duration'] = 240
+# ''' best practice update data '''
+# movie.update({
+#     'rating': 4.45,
+#     'duration': 240
+# })
+# print(movie)
+# ''' add and update same in dictionary '''
+
+# ''' delete data in dictionary '''
+# movie.pop('duration') # hapus satu
+# print(movie)
+
+''' Selection '''
+# value = 10
+# if value % 2 == 0: #genap
+#     print("genap")
+# else: #ganjil
+#     print("ganjil")
+
+''' Looping '''
+''' for dan while '''
+
+''' for '''
+# for i in range(1, 11): # 1 - 10
+#     print(i)
+
+# for (int i=1; i<11; i+=2)
+# for i in range(1, 11, 2):
+#     print(i)
+
+# for i in range(11, 1, -2):
+#     print(i)
+
+# for (int i=11; i<1; i-=2)
+# for i in range(11, 1, -2):
+#     print(i)
+
+''' foreach '''
+# names = ['Alita', 'Angel', 'Bob']
+# for name in names:
+#     print(name)
+
+''' while '''
+''' input nama, validasi 5-25 chars '''
+# nama = ''
+# while len(nama) < 5 or len(nama) > 25:
+#     nama = input("Enter your name : ")
+
+''' function in python '''
+#pangkat
+# def pow(a, b):
+#     return a ** b
+
+# first_number = int(input("Input first number : "))
+# second_number = int(input("Input second number : "))
+# print(pow(first_number, second_number))
+
+''' Intro to numpy '''
+# import numpy as npy
+
+# ''' cara bikin array in numpy '''
+# arr = npy.array([1,2,3])
+# print(arr)
+
+# arr = npy.arange(1, 9)
+# print(arr)
+
+# ''' reshape arr jadi matrix '''
+# print(arr.shape)
+# arr = arr.reshape(4, 2)
+# print(arr)
+
+# ''' tumpukan matrix jadi suatu matrix yang baru '''
+# new_arr = npy.array([9, 10])
+# new_arr = npy.vstack((arr, new_arr))
+# print(new_arr)
+
+# temp_arr = npy.array([1,2,3,4,5])
+# temp_arr = temp_arr.reshape(5, 1) # baris dulu baru kolom
+# new_arr = npy.hstack((new_arr, temp_arr))
+# print(new_arr)
+
+''' hstack '''
+# 1
+# 2
+
+''' vstack '''
+# | 1 | 2 |
+
+''' load and show image using openCV '''
+import cv2
+
+# 1. imread
+img = cv2.imread('panda.jpg', 1)
+# 2. imshow
+cv2.imshow('Panda', img)
+# 3. waitkey supaya berhenti
+cv2.waitKey(0)
+
+# imread:
+# 1 = RGB V
+# 0 = Balck & White V
+# -1 = RGBA

@@ -1,0 +1,6 @@
+import cv2
+import os
+import numpy as np
+from scipy.cluster.vq import *
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import LinearSVC
